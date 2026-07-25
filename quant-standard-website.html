@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Quant Center — SAT Math, GMAT Quant &amp; Data Insights, GRE Quant | Rabat</title>
+<meta name="description" content="One-on-one SAT Math, GMAT Quant & Data Insights, and GRE Quant preparation. Rabat & Casablanca in-person, online worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+
+  /* ============ TOKENS ============ */
+  :root{
+    --paper:#FFFFFF;
+    --paper-alt:#F6F5F3;
+    --ink:#171B24;
+    --graphite:#62666D;
+    --graphite-light:#8A8E94;
+    --accent:#7A2331;
+    --accent-dark:#5C1A26;
+    --accent-tint:#F7ECEE;
+    --line:#E5E3DF;
+
+    --font-serif:'Spectral', serif;
+    --font-sans:'Work Sans', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+
+    --max:1180px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+  body{
+    font-family:var(--font-sans);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:16.5px;
+    font-weight:400;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+  h1,h2,h3,h4{font-family:var(--font-serif);font-weight:500;line-height:1.15;letter-spacing:-0.01em;color:var(--ink);}
+  em{font-family:var(--font-serif);font-style:italic;font-weight:500;}
+  .mono{font-family:var(--font-mono);}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+  @media (max-width:720px){ .wrap{padding:0 24px;} }
+  section{padding:128px 0;}
+  @media (max-width:900px){ section{padding:84px 0;} }
+  @media (max-width:560px){ section{padding:64px 0;} }
+
+  .eyebrow{
+    display:block;
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:22px;
+  }
+
+  h2.section-title{font-size:clamp(30px,4vw,44px);max-width:680px;font-weight:500;}
+  p.section-lede{color:var(--graphite);font-size:18px;max-width:560px;margin-top:20px;line-height:1.65;font-weight:400;}
+
+  .hairline{border:none;border-top:1px solid var(--line);}
+  .hairline-pair{height:5px;border-bottom:1px solid var(--line);position:relative;margin:0;}
+  .hairline-pair::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);margin-top:4px;}
+
+  .list-quiet{margin-top:20px;}
+  .list-quiet li{
+    padding:13px 0 13px 22px;border-top:1px solid var(--line);
+    font-size:15px;color:var(--ink);position:relative;
+  }
+  .list-quiet li::before{content:"—";position:absolute;left:0;color:var(--accent);font-family:var(--font-mono);}
+
+  /* ============ BUTTONS ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    padding:15px 28px;font-weight:500;font-size:14.5px;
+    font-family:var(--font-sans);white-space:nowrap;border-radius:2px;
+    transition:transform .2s cubic-bezier(.2,.8,.2,1), background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{background:var(--accent);transform:translateY(-1px);}
+  .btn-outline{border:1px solid var(--ink);color:var(--ink);}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+  .btn-text{font-weight:500;color:var(--ink);border-bottom:1px solid var(--ink);padding:2px 0;border-radius:0;}
+  .btn-text:hover{color:var(--accent);border-color:var(--accent);}
+  .btn-sm{padding:10px 18px;font-size:13px;}
+
+  /* ============ HEADER ============ */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;}
+  .logo{font-family:var(--font-serif);font-weight:500;font-size:20px;color:var(--ink);}
+  .nav-links{display:flex;align-items:center;gap:36px;}
+  .nav-links a{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--graphite);transition:color .15s;
+  }
+  .nav-links a:hover{color:var(--accent);}
+  .nav-toggle{display:none;}
+  .burger{display:none;width:32px;height:32px;flex-direction:column;justify-content:center;gap:5px;}
+  .burger span{height:1px;background:var(--ink);}
+
+  @media (max-width:980px){
+    .nav-links{
+      position:absolute;top:84px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);
+      flex-direction:column;align-items:flex-start;gap:0;max-height:0;overflow:hidden;transition:max-height .3s ease;
+    }
+    .nav-links a{width:100%;padding:18px 24px;border-bottom:1px solid var(--line);}
+    .nav-toggle:checked ~ .nav-links{max-height:420px;}
+    .burger{display:flex;}
+    .nav-cta{display:none;}
+  }
+
+  /* ============ HERO ============ */
+  .hero{padding:88px 0 0;}
+  .hero-inner{max-width:660px;}
+  .hero h1{font-size:clamp(36px,4.6vw,58px);letter-spacing:-.02em;}
+  .hero p.lede{font-size:19px;color:var(--graphite);margin-top:26px;max-width:480px;line-height:1.65;}
+  .hero-actions{display:flex;align-items:center;gap:28px;margin-top:40px;flex-wrap:wrap;}
+
+  .stats-strip{margin-top:96px;border-top:1px solid var(--line);}
+  @media (max-width:900px){ .stats-strip{margin-top:64px;} }
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);}
+  @media (max-width:760px){ .stats-row{grid-template-columns:repeat(2,1fr);} }
+  .stat{padding:36px 28px 36px 0;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  @media (max-width:760px){ .stat{border-right:1px solid var(--line);} .stat:nth-child(2n){border-right:none;} }
+  .stat .n{font-family:var(--font-serif);font-size:44px;font-weight:500;color:var(--ink);}
+  .stat .l{font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--graphite);margin-top:8px;}
+
+  /* ============ EDITORIAL ROWS (Services) ============ */
+  .erow{max-width:600px;padding-top:56px;border-top:1px solid var(--line);}
+  .erow + .erow{margin-top:80px;}
+  .erow.rev{margin-left:auto;}
+  @media (max-width:760px){ .erow{max-width:100%;} .erow.rev{margin-left:0;} }
+  .erow-text .num{font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:.06em;}
+  .erow-text h3{font-size:clamp(24px,3vw,32px);margin-top:14px;}
+  .erow-text p.desc{color:var(--graphite);font-size:16px;margin-top:16px;line-height:1.7;}
+
+  /* ============ PULL QUOTE / TRACK RECORD ============ */
+  .pullquote{background:var(--ink);color:var(--paper);}
+  .pullquote .eyebrow{color:#C98D96;}
+  .pq-text{font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:clamp(24px,3.4vw,38px);
+    max-width:820px;line-height:1.4;color:var(--paper);}
+
+  /* ============ TESTS TABLE ============ */
+  .tests-table{margin-top:56px;border-top:1px solid var(--ink);}
+  table{width:100%;border-collapse:collapse;}
+  th,td{text-align:left;padding:22px 20px 22px 0;font-size:14.5px;vertical-align:top;}
+  thead th{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;
+    color:var(--graphite);font-weight:400;padding-top:16px;padding-bottom:16px;}
+  tbody th{font-family:var(--font-serif);font-weight:500;font-size:19px;color:var(--ink);white-space:nowrap;}
+  tbody tr{border-top:1px solid var(--line);}
+  tbody td{color:var(--graphite);line-height:1.55;}
+  td.score-cell{font-family:var(--font-mono);color:var(--ink);font-size:13.5px;}
+  @media (max-width:800px){ .tests-table{overflow-x:auto;} table{min-width:680px;} }
+
+  .tests-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:64px;}
+  @media (max-width:860px){ .tests-notes{grid-template-columns:1fr;gap:32px;} }
+  .tests-notes .num{font-family:var(--font-mono);font-size:12px;color:var(--accent);}
+  .tests-notes h4{font-size:18px;margin-top:10px;font-weight:500;}
+  .tests-notes p{font-size:14.5px;color:var(--graphite);margin-top:10px;line-height:1.65;}
+
+  /* ============ TIMELINE ============ */
+  .timeline{margin-top:64px;position:relative;}
+  .tl-item{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:36px 0;border-top:1px solid var(--line);}
+  .tl-item:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:640px){ .tl-item{grid-template-columns:60px 1fr;gap:20px;} }
+  .tl-num{font-family:var(--font-serif);font-style:italic;font-size:34px;color:var(--accent);}
+  .tl-body h4{font-size:19px;font-weight:500;}
+  .tl-body p{font-size:15px;color:var(--graphite);margin-top:8px;max-width:520px;line-height:1.65;}
+
+  /* ============ TESTIMONIALS ============ */
+  .testi-group{margin-top:52px;}
+  .testi-group:first-of-type{margin-top:64px;}
+  .testi-group-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;border-bottom:1px solid var(--ink);padding-bottom:16px;}
+  .testi-group-head h3{font-size:19px;font-weight:500;}
+  .testi-group-head span{font-family:var(--font-mono);font-size:11px;color:var(--graphite);text-transform:uppercase;letter-spacing:.04em;}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:32px;}
+  @media (max-width:900px){ .testi-grid{grid-template-columns:repeat(2,1fr);gap:32px;} }
+  @media (max-width:600px){ .testi-grid{grid-template-columns:1fr;gap:32px;} }
+  .testi blockquote{font-family:var(--font-serif);font-style:italic;font-size:17.5px;line-height:1.55;color:var(--ink);}
+  .testi cite{display:block;font-style:normal;font-family:var(--font-mono);font-size:11.5px;color:var(--graphite);
+    text-transform:uppercase;letter-spacing:.05em;margin-top:18px;}
+  .stars{display:flex;gap:3px;margin-bottom:14px;}
+  .stars .star{font-size:15px;color:var(--accent);line-height:1;}
+  .stars .star.off{color:var(--line);}
+
+  /* ============ LEAVE A REVIEW ============ */
+  .review-form{max-width:560px;margin-top:48px;}
+  .rf-field{margin-bottom:26px;}
+  .rf-field label{display:block;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--graphite);margin-bottom:10px;}
+  .rf-field input[type="text"], .rf-field select, .rf-field textarea{
+    width:100%;border:none;border-bottom:1px solid var(--line);background:transparent;
+    font-family:var(--font-sans);font-size:16px;color:var(--ink);padding:10px 2px;
+    transition:border-color .2s;
+  }
+  .rf-field input[type="text"]:focus, .rf-field select:focus, .rf-field textarea:focus{
+    outline:none;border-bottom-color:var(--accent);
+  }
+  .rf-field textarea{resize:vertical;min-height:96px;font-family:var(--font-sans);line-height:1.6;}
+  .rf-stars{display:flex;gap:8px;}
+  .rf-stars .rf-star{font-size:28px;color:var(--line);cursor:pointer;transition:color .15s, transform .15s;background:none;border:none;font-family:var(--font-sans);line-height:1;padding:0;}
+  .rf-stars .rf-star:hover{transform:scale(1.1);}
+  .rf-stars .rf-star.on{color:var(--accent);}
+  .rf-note{font-family:var(--font-mono);font-size:11.5px;color:var(--graphite-light);margin-top:18px;line-height:1.6;}
+
+  /* ============ PRICING ============ */
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:56px;border:1px solid var(--line);}
+  @media (max-width:900px){ .pricing-grid{grid-template-columns:1fr;} }
+  .price-col{background:var(--paper);padding:36px 32px;}
+  .price-col h3{font-size:21px;font-weight:500;}
+  .price-col p.desc{font-size:13.5px;color:var(--graphite);margin-top:8px;}
+  .price-single{font-family:var(--font-mono);font-size:13px;color:var(--graphite);margin-top:20px;padding-top:20px;border-top:1px solid var(--line);}
+  .price-single b{color:var(--ink);font-size:17px;}
+  .tier{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:16px 0;border-top:1px solid var(--line);}
+  .tier-name{font-size:14.5px;font-weight:500;}
+  .tier-hours{font-family:var(--font-mono);font-size:11.5px;color:var(--graphite);margin-top:2px;}
+  .tier-price{font-family:var(--font-mono);font-size:15px;text-align:right;white-space:nowrap;}
+  .tier-save{font-size:10.5px;color:var(--accent);text-align:right;margin-top:2px;}
+  .price-note{font-family:var(--font-mono);font-size:11px;color:var(--graphite-light);margin-top:20px;padding-top:16px;border-top:1px solid var(--line);}
+
+  /* ============ BOOKS ============ */
+  .books-group{margin-top:56px;}
+  .books-group-head{display:flex;align-items:baseline;gap:16px;margin-bottom:4px;border-bottom:1px solid var(--ink);padding-bottom:16px;}
+  .books-group-head h3{font-size:20px;font-weight:500;}
+  .books-group-head span{font-family:var(--font-mono);font-size:11px;color:var(--graphite);text-transform:uppercase;letter-spacing:.04em;}
+  .book-row{display:grid;grid-template-columns:2fr 1fr auto;gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);}
+  @media (max-width:700px){ .book-row{grid-template-columns:1fr;gap:10px;} }
+  .book-row h4{font-size:16px;font-weight:500;}
+  .book-row .pub{font-family:var(--font-mono);font-size:10.5px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;}
+  .book-row p{font-size:13.5px;color:var(--graphite);margin-top:4px;line-height:1.5;}
+  .book-price{font-family:var(--font-mono);font-size:15px;color:var(--ink);}
+
+  /* ============ CTA BAND ============ */
+  .cta-band{background:var(--accent-tint);}
+  .cta-inner{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;}
+  .cta-inner h2{font-size:clamp(26px,3.2vw,36px);max-width:520px;}
+  .cta-inner .actions{display:flex;gap:16px;flex-wrap:wrap;}
+
+  /* ============ ABOUT ============ */
+  .about-copy{max-width:680px;margin-top:44px;}
+  .about-copy p{color:var(--graphite);font-size:17px;margin-top:18px;line-height:1.75;}
+  .about-copy p strong{color:var(--ink);font-weight:600;}
+
+  /* ============ FAQ ============ */
+  .faq-list{max-width:780px;margin-top:56px;}
+  details{border-top:1px solid var(--line);padding:24px 0;}
+  details:last-child{border-bottom:1px solid var(--line);}
+  summary{
+    display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+    font-family:var(--font-serif);font-weight:500;font-size:18px;list-style:none;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-family:var(--font-sans);font-size:22px;color:var(--accent);font-weight:300;flex:none;margin-left:16px;transition:transform .25s;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{color:var(--graphite);font-size:15px;margin-top:16px;max-width:640px;line-height:1.7;}
+
+  /* ============ CONTACT ============ */
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;margin-top:56px;}
+  @media (max-width:820px){ .contact-grid{grid-template-columns:1fr;gap:36px;} }
+  .contact-info{border-top:1px solid var(--ink);padding-top:32px;}
+  .info-row{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);}
+  .info-row .label{font-family:var(--font-mono);font-size:11px;color:var(--graphite);text-transform:uppercase;letter-spacing:.05em;}
+  .info-row .val{font-size:14.5px;text-align:right;}
+
+  /* ============ SETUP NOTES ============ */
+  .setup-notes{background:var(--paper-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .setup-notes h3{font-size:16px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;font-weight:500;color:var(--graphite);}
+  .setup-notes ul{margin-top:24px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px;}
+  @media (max-width:760px){ .setup-notes ul{grid-template-columns:1fr;} }
+  .setup-notes li{font-size:13.5px;color:var(--graphite);padding-left:18px;position:relative;line-height:1.6;}
+  .setup-notes li::before{content:"→";position:absolute;left:0;color:var(--accent);}
+  .setup-notes li strong{color:var(--ink);}
+
+  /* ============ FOOTER ============ */
+  footer{padding:48px 0;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    font-size:13px;color:var(--graphite-light);}
+  .footer-row .logo{font-size:16px;color:var(--ink);}
+
+  /* ============ reveal ============ */
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);}
+  .js .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){ .js .reveal{opacity:1;transform:none;transition:none;} }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">The Quant Center</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tests">The Tests</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline btn-sm">Book a Diagnostic</a>
+    </div>
+    <label for="nav-toggle" class="burger" aria-label="Menu"><span></span><span></span><span></span></label>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="eyebrow">Rabat · Casablanca · Online</span>
+        <h1>Where ambitious students master the <em>quantitative</em> sections.</h1>
+        <p class="lede">One-on-one preparation for SAT Math, GMAT Quant &amp; Data Insights, and GRE Quant — three tests, one exclusive focus, taught by a specialist.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a Free Diagnostic</a>
+          <a href="#pricing" class="btn btn-text">View Pricing</a>
+        </div>
+      </div>
+
+      <div class="stats-strip">
+        <div class="stats-row">
+          <div class="stat reveal"><div class="n"><span class="count" data-target="3">0</span></div><div class="l">Years specializing</div></div>
+          <div class="stat reveal"><div class="n"><span class="count" data-target="3">0</span></div><div class="l">Tests covered</div></div>
+          <div class="stat reveal"><div class="n">2</div><div class="l">Cities in-person, plus online</div></div>
+          <div class="stat reveal"><div class="n">1:1</div><div class="l">Every session</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <span class="eyebrow">What We Teach</span>
+      <h2 class="section-title">Three tests. One exclusive focus: the numbers.</h2>
+      <p class="section-lede">No verbal sections, no essay coaching — every session is quantitative reasoning, taught in depth rather than spread thin.</p>
+
+      <div style="margin-top:80px;">
+        <div class="erow">
+          <div class="erow-text reveal">
+            <span class="num">01 — SAT</span>
+            <h3>SAT Math</h3>
+            <p class="desc">Every domain on the Digital SAT Math section — algebra, advanced math, problem-solving &amp; data analysis, geometry and trigonometry — trained on the real adaptive, calculator-enabled format.</p>
+            <ul class="list-quiet">
+              <li>Digital SAT format &amp; adaptive strategy</li>
+              <li>Official Bluebook-style practice</li>
+              <li>Timing and accuracy drills</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="erow rev">
+          <div class="erow-text reveal">
+            <span class="num">02 — GMAT</span>
+            <h3>GMAT Quant &amp; Data Insights</h3>
+            <p class="desc">Focused on the two most math-heavy sections of the current GMAT Focus Edition, for applicants who need to move their score without redoing Verbal from scratch.</p>
+            <ul class="list-quiet">
+              <li>Current GMAT format, 205–805 scale</li>
+              <li>Data Insights: multi-source &amp; table analysis</li>
+              <li>Full-length, timed practice sets</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="erow">
+          <div class="erow-text reveal">
+            <span class="num">03 — GRE</span>
+            <h3>GRE Quant</h3>
+            <p class="desc">Deep, dedicated work on GRE Quantitative Reasoning — arithmetic, algebra, geometry, and data interpretation — for applicants who want one section to carry more weight.</p>
+            <ul class="list-quiet">
+              <li>Section-adaptive test strategy</li>
+              <li>On-screen calculator strategy</li>
+              <li>Zero vocabulary — pure quant focus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE / TRACK RECORD -->
+  <section class="pullquote">
+    <div class="wrap">
+      <span class="eyebrow">Track Record</span>
+      <p class="pq-text reveal">"Three years, focused entirely on the quantitative sections of three tests — because depth beats breadth when the score is what matters."</p>
+    </div>
+  </section>
+
+  <!-- TESTS EXPLAINED -->
+  <section id="tests">
+    <div class="wrap">
+      <span class="eyebrow">Understanding The Tests</span>
+      <h2 class="section-title">SAT, GMAT, GRE — what they're for, and what a good score does for you.</h2>
+      <p class="section-lede">Three different tests, for three different moments in a student's or professional's life.</p>
+
+      <div class="tests-table reveal">
+        <table>
+          <thead>
+            <tr><th>Test</th><th>Used for</th><th>Score range</th><th>Format</th><th>Who takes it</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>SAT</th>
+              <td>Undergraduate admissions, mainly in the US</td>
+              <td class="score-cell">400–1600 total (Math 200–800)</td>
+              <td>Digital, adaptive, ~2h14m</td>
+              <td>High school students, usually junior/senior year</td>
+            </tr>
+            <tr>
+              <th>GMAT</th>
+              <td>MBA &amp; business school admissions</td>
+              <td class="score-cell">205–805 total (Quant, Verbal &amp; DI combined)</td>
+              <td>Digital, ~2h15m, no essay</td>
+              <td>Working professionals applying to business school</td>
+            </tr>
+            <tr>
+              <th>GRE</th>
+              <td>Master's &amp; PhD admissions, most fields — plus some MBA programs</td>
+              <td class="score-cell">260–340 total (Verbal + Quant) + Writing 0–6</td>
+              <td>Digital, ~2 hours</td>
+              <td>Graduate school applicants across disciplines</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tests-notes">
+        <div class="reveal"><div class="num">SAT</div><h4>What a good score does</h4><p>Strengthens a US college application and can unlock merit scholarships — worth aiming high even at schools that no longer require it.</p></div>
+        <div class="reveal"><div class="num">GMAT</div><h4>What a good score does</h4><p>One of the most controllable parts of an MBA application — unlike work experience or recommendations, it comes down to preparation.</p></div>
+        <div class="reveal"><div class="num">GRE</div><h4>What a good score does</h4><p>Accepted by a far wider range of programs than the GMAT, keeping options open across Master's, PhD, and MBA programs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="how" style="background:var(--paper-alt);">
+    <div class="wrap">
+      <span class="eyebrow">Process</span>
+      <h2 class="section-title">How it works, from first message to test day.</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-num">01</div>
+          <div class="tl-body"><h4>Free diagnostic</h4><p>A 20–30 minute session that pinpoints exactly where points are being lost — not a generic level check.</p></div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-num">02</div>
+          <div class="tl-body"><h4>Personalized plan</h4><p>A session sequence built around your target score, current level, and test date.</p></div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-num">03</div>
+          <div class="tl-body"><h4>Sessions</h4><p>In-person in Rabat or Casablanca, or online — your choice, with the same materials either way.</p></div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-num">04</div>
+          <div class="tl-body"><h4>Track &amp; adjust</h4><p>Every session ends with a clear next target, not just "see you next week."</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="wrap">
+      <span class="eyebrow">What Students Say</span>
+      <h2 class="section-title">Real results, in their own words.</h2>
+
+      <div class="testi-group">
+        <div class="testi-group-head"><h3>SAT</h3><span>6 students</span></div>
+        <div class="testi-grid">
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"My SAT Math score improved significantly over three months. The personalized study plan and detailed explanations completely changed the way I approached the section."</blockquote>
+            <cite>— Yassine</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"I never thought I could enjoy SAT Math, but every lesson made difficult concepts feel simple. I felt confident on test day."</blockquote>
+            <cite>— Salma</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"What impressed me most was the constant feedback after every practice test. I always knew exactly what to improve."</blockquote>
+            <cite>— Omar</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"I finally understood how to approach SAT Math thanks to the clear strategies. My score improved significantly."</blockquote>
+            <cite>— Aya</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"The mock exams and detailed reviews helped me manage my time much better. That alone made a huge difference in my final score."</blockquote>
+            <cite>— Zakaria</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"I appreciated how every lesson focused on results rather than memorization. The tutoring was professional, encouraging, and extremely effective."</blockquote>
+            <cite>— Kenza</cite>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-group">
+        <div class="testi-group-head"><h3>GMAT</h3><span>3 students</span></div>
+        <div class="testi-grid">
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"The structured approach helped me improve my Quant score far beyond what I achieved studying on my own. Every session was productive."</blockquote>
+            <cite>— Adam</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"I balanced a full-time job while preparing for the GMAT, and the flexible schedule made all the difference. I exceeded my target score."</blockquote>
+            <cite>— Lina</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"Every lesson was tailored to my weaknesses. I felt supported throughout the entire preparation process."</blockquote>
+            <cite>— Hamza</cite>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-group">
+        <div class="testi-group-head"><h3>GRE</h3><span>3 students</span></div>
+        <div class="testi-grid">
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"The tutoring sessions were incredibly organized. I especially appreciated the problem-solving strategies for the Quant section, which helped me increase my score significantly."</blockquote>
+            <cite>— Inès</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"The problem-solving techniques I learned were much more effective than anything I found in prep books."</blockquote>
+            <cite>— Mehdi</cite>
+          </div>
+          <div class="testi reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+            <blockquote>"The sessions were challenging but motivating. I entered the exam feeling prepared and much more confident."</blockquote>
+            <cite>— Sara</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAVE A REVIEW -->
+  <section id="leave-review" style="background:var(--paper-alt);">
+    <div class="wrap">
+      <span class="eyebrow">Share Your Experience</span>
+      <h2 class="section-title">Studied with us? Leave a review.</h2>
+      <p class="section-lede">Your feedback helps other students and professionals decide with confidence.</p>
+
+      <form class="review-form" id="reviewForm">
+        <div class="rf-field">
+          <label for="rf-name">Your name</label>
+          <input type="text" id="rf-name" name="name" placeholder="e.g. Yassine" required>
+        </div>
+        <div class="rf-field">
+          <label for="rf-test">Which test?</label>
+          <select id="rf-test" name="test" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="SAT Math">SAT Math</option>
+            <option value="GMAT Quant & Data Insights">GMAT Quant &amp; Data Insights</option>
+            <option value="GRE Quant">GRE Quant</option>
+          </select>
+        </div>
+        <div class="rf-field">
+          <label>Your rating</label>
+          <div class="rf-stars" id="rfStars" role="radiogroup" aria-label="Star rating">
+            <button type="button" class="rf-star" data-value="1" aria-label="1 star">★</button>
+            <button type="button" class="rf-star" data-value="2" aria-label="2 stars">★</button>
+            <button type="button" class="rf-star" data-value="3" aria-label="3 stars">★</button>
+            <button type="button" class="rf-star" data-value="4" aria-label="4 stars">★</button>
+            <button type="button" class="rf-star" data-value="5" aria-label="5 stars">★</button>
+          </div>
+          <input type="hidden" id="rf-rating" name="rating" value="">
+        </div>
+        <div class="rf-field">
+          <label for="rf-review">Your review</label>
+          <textarea id="rf-review" name="review" placeholder="What changed for you? Be specific if you can." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Review</button>
+        <p class="rf-note">Sending opens your email app with your review pre-filled — reviews aren't posted automatically, so they can be checked before going live.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <h2 class="reveal">Ready to see exactly where you stand?</h2>
+      <div class="actions">
+        <a href="#contact" class="btn btn-primary">Book a Free Diagnostic</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <span class="eyebrow">Pricing &amp; Billing</span>
+      <h2 class="section-title">Packages, not open-ended hours.</h2>
+      <p class="section-lede">Prices in Moroccan Dirham (MAD). Packages are paid upfront and valid for 2–3 months. Single sessions are always available.</p>
+
+      <div class="pricing-grid">
+        <div class="price-col reveal">
+          <h3>SAT Math</h3>
+          <p class="desc">Most students need 10–30 hours total.</p>
+          <div class="price-single">Single session (1h) — <b>350 MAD</b></div>
+          <div class="tier"><div><div class="tier-name">Starter</div><div class="tier-hours">10 hours</div></div><div><div class="tier-price">3,150 MAD</div><div class="tier-save">save 350 MAD</div></div></div>
+          <div class="tier"><div><div class="tier-name">Core Program</div><div class="tier-hours">20 hours</div></div><div><div class="tier-price">6,000 MAD</div><div class="tier-save">save 1,000 MAD</div></div></div>
+          <div class="tier"><div><div class="tier-name">Full Prep</div><div class="tier-hours">30 hours</div></div><div><div class="tier-price">8,400 MAD</div><div class="tier-save">save 2,100 MAD</div></div></div>
+          <div class="price-note">Ideal starting point: 3–4 months before test day.</div>
+        </div>
+
+        <div class="price-col reveal">
+          <h3>GRE Quant</h3>
+          <p class="desc">Most students need 8–22 hours.</p>
+          <div class="price-single">Single session (1h) — <b>450 MAD</b></div>
+          <div class="tier"><div><div class="tier-name">Boost</div><div class="tier-hours">8 hours</div></div><div><div class="tier-price">3,250 MAD</div><div class="tier-save">save 350 MAD</div></div></div>
+          <div class="tier"><div><div class="tier-name">Core Program</div><div class="tier-hours">15 hours</div></div><div><div class="tier-price">5,750 MAD</div><div class="tier-save">save 1,000 MAD</div></div></div>
+          <div class="tier"><div><div class="tier-name">Comprehensive</div><div class="tier-hours">22 hours</div></div><div><div class="tier-price">7,900 MAD</div><div class="tier-save">save 2,000 MAD</div></div></div>
+          <div class="price-note">Best for a specific Quant score threshold.</div>
+        </div>
+
+        <div class="price-col reveal">
+          <h3>GMAT Quant &amp; DI</h3>
+          <p class="desc">Most students need 10–30 hours.</p>
+          <div class="price-single">Single session (1h) — <b>500 MAD</b></div>
+          <div class="tier"><div><div class="tier-name">Tune-Up</div><div class="tier-hours">10 hours</div></div><div><div class="tier-price">4,500 MAD</div><div class="tier-save">save 500 MAD</div></div></div>
+          <div class="tier"><div><div class="tier-name">Core Program</div><div class="tier-hours">20 hours</div></div><div><div class="tier-price">8,500 MAD</div><div class="tier-save">save 1,500 MAD</div></div></div>
+          <div class="tier"><div><div class="tier-name">Fast-Track</div><div class="tier-hours">30 hours</div></div><div><div class="tier-price">12,000 MAD</div><div class="tier-save">save 3,000 MAD</div></div></div>
+          <div class="price-note">Fast-Track suits compressed, pre-deadline timelines.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS SCHOLARSHIP -->
+  <section id="scholarship" style="background:var(--paper-alt);">
+    <div class="wrap">
+      <span class="eyebrow">Progress Rewards</span>
+      <h2 class="section-title">The Progress Scholarship</h2>
+      <p class="section-lede">Real score improvement earns a discount on your next package — measured from your diagnostic score to an official practice test, not internal drills alone.</p>
+
+      <div class="pricing-grid">
+        <div class="price-col reveal">
+          <h3>SAT Math</h3>
+          <p class="desc">Improvement measured on the Math section, diagnostic to official Bluebook practice test.</p>
+          <div class="tier"><div><div class="tier-name">+60 points</div></div><div><div class="tier-price">5% off</div></div></div>
+          <div class="tier popular"><div><div class="tier-name">+100 points</div></div><div><div class="tier-price">10% off</div></div></div>
+          <div class="tier"><div><div class="tier-name">+150 points</div></div><div><div class="tier-price">15% off</div></div></div>
+          <div class="price-note">Applied to your next SAT Math package.</div>
+        </div>
+
+        <div class="price-col reveal">
+          <h3>GRE Quant</h3>
+          <p class="desc">Improvement measured diagnostic to an official ETS practice test.</p>
+          <div class="tier"><div><div class="tier-name">+3 points</div></div><div><div class="tier-price">5% off</div></div></div>
+          <div class="tier popular"><div><div class="tier-name">+5 points</div></div><div><div class="tier-price">10% off</div></div></div>
+          <div class="tier"><div><div class="tier-name">+7 points</div></div><div><div class="tier-price">15% off</div></div></div>
+          <div class="price-note">Applied to your next GRE Quant package.</div>
+        </div>
+
+        <div class="price-col reveal">
+          <h3>GMAT Quant &amp; DI</h3>
+          <p class="desc">Improvement measured diagnostic to an official GMAC practice exam.</p>
+          <div class="tier"><div><div class="tier-name">+30 points</div></div><div><div class="tier-price">5% off</div></div></div>
+          <div class="tier popular"><div><div class="tier-name">+50 points</div></div><div><div class="tier-price">10% off</div></div></div>
+          <div class="tier"><div><div class="tier-name">+80 points</div></div><div><div class="tier-price">15% off</div></div></div>
+          <div class="price-note">Applied to your next GMAT package.</div>
+        </div>
+      </div>
+      <p class="price-note" style="margin-top:28px;">Discount tiers are a starting point based on typical score movement — worth calibrating against your own students' real results once you have enough data points.</p>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section id="books">
+    <div class="wrap">
+      <span class="eyebrow">Materials</span>
+      <h2 class="section-title">Official books, for these three tests only.</h2>
+      <p class="section-lede">The same official guides used in sessions — useful on their own, or alongside a tutoring package.</p>
+
+      <div class="books-group">
+        <div class="books-group-head"><h3>SAT</h3><span>Math + Reading &amp; Writing</span></div>
+        <div class="book-row reveal">
+          <div><div class="pub">College Board — Official</div><h4>The Official Digital SAT Study Guide</h4><p>Four official digital practice tests, plus full Math and Reading &amp; Writing review.</p></div>
+          <div class="book-price">480 MAD</div>
+          <a class="btn btn-outline btn-sm" href="#contact">Order</a>
+        </div>
+      </div>
+
+      <div class="books-group">
+        <div class="books-group-head"><h3>GMAT</h3><span>Focus Edition</span></div>
+        <div class="book-row reveal">
+          <div><div class="pub">GMAC — Official</div><h4>GMAT Official Guide — Focus Edition</h4><p>The core official guide: Quant, Verbal &amp; Data Insights questions from the test maker.</p></div>
+          <div class="book-price">550 MAD</div>
+          <a class="btn btn-outline btn-sm" href="#contact">Order</a>
+        </div>
+        <div class="book-row reveal">
+          <div><div class="pub">GMAC — Official</div><h4>GMAT Official Guide: Quantitative Review</h4><p>Extra official Quant-only practice questions, for focused drilling.</p></div>
+          <div class="book-price">380 MAD</div>
+          <a class="btn btn-outline btn-sm" href="#contact">Order</a>
+        </div>
+      </div>
+
+      <div class="books-group">
+        <div class="books-group-head"><h3>GRE</h3><span>General Test</span></div>
+        <div class="book-row reveal">
+          <div><div class="pub">ETS — Official</div><h4>The Official Guide to the GRE General Test (4th Ed.)</h4><p>The core official guide, fully updated for the shorter, ~2-hour format.</p></div>
+          <div class="book-price">520 MAD</div>
+          <a class="btn btn-outline btn-sm" href="#contact">Order</a>
+        </div>
+        <div class="book-row reveal">
+          <div><div class="pub">ETS — Official</div><h4>Official GRE Quantitative Reasoning Practice Questions, Vol. 1</h4><p>150 real Quant questions with complete explanations.</p></div>
+          <div class="book-price">350 MAD</div>
+          <a class="btn btn-outline btn-sm" href="#contact">Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <span class="eyebrow">About The Center</span>
+      <h2 class="section-title">The Quant Center</h2>
+      <div class="about-copy">
+        <p><strong>The Quant Center specializes exclusively in the quantitative sections of the SAT, GMAT, and GRE</strong> — three years of focused experience, working exclusively on the numbers.</p>
+        <p>Every session — in-person in Rabat and Casablanca, or online anywhere else — is built entirely around the quantitative sections: deep, focused preparation instead of a curriculum spread across territory it doesn't need to cover.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--paper-alt);">
+    <div class="wrap">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">Questions worth answering upfront.</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Do you teach SAT Verbal, GMAT Verbal, or GRE Verbal too?</summary>
+          <p>No — this is a deliberate specialization in the quantitative sections only. That focus allows for deeper, faster progress than a generalist tutor covering every section.</p>
+        </details>
+        <details>
+          <summary>How many sessions will I actually need?</summary>
+          <p>It depends on your starting point and target score: roughly 10–30 hours for SAT Math, 10–30 hours for GMAT Quant &amp; Data Insights, and 8–22 hours for GRE Quant. Your diagnostic session will narrow this down.</p>
+        </details>
+        <details>
+          <summary>Is the SAT still on paper?</summary>
+          <p>No. The SAT has been fully digital and adaptive since 2024, and that's the exact format used in every session — including the on-screen calculator built into the test.</p>
+        </details>
+        <details>
+          <summary>What's the difference between GMAT Quant and Data Insights?</summary>
+          <p>Quantitative Reasoning tests traditional problem-solving with numbers and algebra. Data Insights covers multi-source reasoning, table analysis, and interpreting data in charts or graphics.</p>
+        </details>
+        <details>
+          <summary>Can I mix online and in-person sessions?</summary>
+          <p>Yes. Many students split their package between in-person sessions when convenient and online the rest of the time — materials and approach stay identical either way.</p>
+        </details>
+        <details>
+          <summary>How does billing work?</summary>
+          <p>Packages are paid upfront and valid for 2–3 months from purchase. Single sessions are billed and paid per session if you'd rather not commit to a package yet.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <span class="eyebrow">Get Started</span>
+      <h2 class="section-title">Book your free diagnostic session.</h2>
+      <p class="section-lede">20–30 minutes, no obligation — we'll find exactly where your points are going.</p>
+      <div class="contact-grid">
+        <div class="reveal">
+          <a href="#contact" class="btn btn-primary">Message on WhatsApp</a>
+          <span style="display:inline-block;width:16px;"></span>
+          <a href="mailto:contact@thequantcenter.ma" class="btn btn-outline">Email Instead</a>
+        </div>
+        <div class="contact-info reveal">
+          <div class="info-row"><div class="label">WhatsApp</div><div class="val">+212 6 XX XX XX XX</div></div>
+          <div class="info-row"><div class="label">Email</div><div class="val">contact@thequantcenter.ma</div></div>
+          <div class="info-row"><div class="label">Service area</div><div class="val">Rabat &amp; Casablanca, online worldwide</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETUP NOTES -->
+  <section class="setup-notes">
+    <div class="wrap">
+      <h3>Before You Publish</h3>
+      <ul>
+        <li><strong>Contact details —</strong> swap in the real WhatsApp number and email once registered for The Quant Center.</li>
+        <li><strong>Book prices —</strong> rough placeholders based on import cost — confirm your real cost + margin.</li>
+        <li><strong>Billing —</strong> currently WhatsApp/email to book, no live payment link — add one if you want online payment.</li>
+        <li><strong>Ordering flow —</strong> "Order" buttons on Books currently scroll to Contact — wire to WhatsApp once the number is live.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <a href="#top" class="logo">The Quant Center</a>
+    <div>SAT Math · GMAT Quant &amp; Data Insights · GRE Quant — Rabat, Morocco</div>
+    <div>&copy; 2026 The Quant Center</div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.nav-links a').forEach(function(link){
+    link.addEventListener('click', function(){
+      document.getElementById('nav-toggle').checked = false;
+    });
+  });
+
+  // interactive star rating
+  var rfStars = document.querySelectorAll('#rfStars .rf-star');
+  var rfRatingInput = document.getElementById('rf-rating');
+  function paintStars(value){
+    rfStars.forEach(function(star){
+      var v = parseInt(star.getAttribute('data-value'), 10);
+      star.classList.toggle('on', v <= value);
+    });
+  }
+  rfStars.forEach(function(star){
+    star.addEventListener('click', function(){
+      var v = star.getAttribute('data-value');
+      rfRatingInput.value = v;
+      paintStars(parseInt(v, 10));
+    });
+    star.addEventListener('mouseenter', function(){
+      paintStars(parseInt(star.getAttribute('data-value'), 10));
+    });
+  });
+  var rfStarsWrap = document.getElementById('rfStars');
+  if (rfStarsWrap) {
+    rfStarsWrap.addEventListener('mouseleave', function(){
+      paintStars(parseInt(rfRatingInput.value || '0', 10));
+    });
+  }
+
+  // review form -> mailto submission
+  var reviewForm = document.getElementById('reviewForm');
+  if (reviewForm) {
+    reviewForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('rf-name').value.trim();
+      var test = document.getElementById('rf-test').value;
+      var rating = rfRatingInput.value;
+      var review = document.getElementById('rf-review').value.trim();
+
+      if (!rating) {
+        alert('Please select a star rating before sending.');
+        return;
+      }
+
+      var stars = '★'.repeat(parseInt(rating, 10)) + '☆'.repeat(5 - parseInt(rating, 10));
+      var subject = 'New review — ' + name + ' (' + test + ')';
+      var body = 'Name: ' + name + '\nTest: ' + test + '\nRating: ' + stars + ' (' + rating + '/5)\n\nReview:\n' + review;
+      var mailto = 'mailto:contact@thequantcenter.ma?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      window.location.href = mailto;
+    });
+  }
+
+  // count-up animation
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var duration = 1400;
+    var start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if(progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+    var countEls = document.querySelectorAll('.count');
+    if (countEls.length) {
+      var countIo = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            if (reduceMotion) {
+              entry.target.textContent = entry.target.getAttribute('data-target');
+            } else {
+              animateCount(entry.target);
+            }
+            countIo.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.4});
+      countEls.forEach(function(el){ countIo.observe(el); });
+    }
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    document.querySelectorAll('.count').forEach(function(el){ el.textContent = el.getAttribute('data-target'); });
+  }
+</script>
+
+</body>
+</html>
