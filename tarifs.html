@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PeakScore — Accompagnement maths SAT · GMAT · GRE</title>
+<title>Tarifs — PeakScore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -275,13 +275,9 @@
   .rc-bar-fill{height:100%;background:var(--teal);border-radius:99px;}
   .rc-bar-fill.gold{background:var(--gold);}
   .rc-bar-note{font-size:11px;color:var(--muted);margin-top:5px;}
-  .rc-boost{margin-top:16px;background:linear-gradient(135deg, rgba(245,166,35,.14), rgba(45,212,191,.12));border:1px solid rgba(245,166,35,.3);border-radius:12px;padding:14px 16px;}
-  .rc-boost-head{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);font-weight:600;}
-  .rc-boost-head svg{height:14px;width:14px;color:var(--gold);}
-  .rc-boost-main{margin-top:6px;display:flex;align-items:baseline;gap:6px;}
-  .rc-boost-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:30px;color:var(--navy);}
-  .rc-boost-unit{font-size:13px;color:var(--muted);font-weight:600;}
-  .rc-boost-range{margin-top:4px;font-size:12.5px;color:var(--teal-dark);font-weight:700;font-family:'Space Grotesk',sans-serif;}
+  .rc-ring-head{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);font-weight:600;margin-top:18px;}
+  .rc-ring-head svg{height:14px;width:14px;color:var(--gold);}
+  .rc-ring{margin-top:10px;}
   .results-note{margin-top:20px;font-size:12px;color:var(--muted);}
   .quote{margin-top:38px;background:var(--bg);border-left:3px solid var(--gold);padding:18px 22px;font-style:italic;color:var(--navy);border-radius:0 12px 12px 0;font-size:15px;}
   .quote cite{display:block;margin-top:8px;font-style:normal;font-size:13px;color:var(--muted);}
@@ -397,73 +393,100 @@
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="wrap hero-inner">
-    <div>
-      <p class="eyebrow" data-i18n="hero_eyebrow">Accompagnement maths individuel — SAT · GMAT · GRE</p>
-      <h1 style="margin-top:14px;" data-i18n="hero_title">Grimpe vers ton <span>meilleur score</span> en maths.</h1>
-      <p class="lead" data-i18n="hero_lead">PeakScore accompagne individuellement les candidats au SAT, au GMAT et au GRE sur la section mathématiques : méthodologie complète, mock tests officiels, et un suivi qui s'adapte à ton objectif.</p>
-      <div class="hero-ctas">
-        <a href="reservation.html" class="btn btn-primary" data-i18n="hero_cta1">Réserver un appel diagnostique gratuit</a>
-        <a href="tarifs.html" class="btn btn-ghost" data-i18n="hero_cta2">Voir les packs</a>
-      </div>
-      <p class="hero-note" data-i18n="hero_note">Disponible 7j/7, de 9h à 21h.</p>
-    </div>
-    <div class="hero-card">
-      <div class="row"><span data-i18n="hero_card1">Accompagnement</span><b data-i18n="hero_card1v">100% individuel</b></div>
-      <div class="row"><span data-i18n="hero_card2">Tests</span><b data-i18n="hero_card2v">Mock tests officiels</b></div>
-      <div class="row"><span data-i18n="hero_card3">Focus</span><b data-i18n="hero_card3v">Section maths</b></div>
-      <div class="row"><span data-i18n="hero_card4">Suivi</span><b data-i18n="hero_card4v">Progress Reward</b></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CHIFFRES CLES ============ -->
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head" style="margin-bottom:36px;">
-      <p class="eyebrow" data-i18n="stats_eyebrow">Le centre en chiffres</p>
-      <h2 data-i18n="stats_title">Nos chiffres clés</h2>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
-        <div class="num">3 <span data-i18n="stats1_unit">ans</span></div>
-        <div class="label" data-i18n="stats1_label">d'expérience en accompagnement maths SAT/GMAT/GRE</div>
-      </div>
-      <div class="stat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
-        <div class="num">+80</div>
-        <div class="label" data-i18n="stats2_label">élèves accompagnés</div>
-      </div>
-      <div class="stat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m8 14V9m8 10V13"/><path d="M2 19h20"/></svg>
-        <div class="num">+100</div>
-        <div class="label" data-i18n="stats3_label">points de progression moyenne à la section Maths</div>
-      </div>
-      <div class="stat">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
-        <div class="num">100%</div>
-        <div class="label" data-i18n="stats4_label">accompagnement individuel</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ COMMENT CA MARCHE ============ -->
-<section class="alt">
+<!-- ============ PACKS ============ -->
+<section id="packs">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow" data-i18n="how_eyebrow">Le parcours</p>
-      <h2 data-i18n="how_title">Comment ça marche</h2>
+      <p class="eyebrow" data-i18n="packs_eyebrow">Accompagnement 100% individuel</p>
+      <h2 data-i18n="packs_title">Nos packs</h2>
+      <p data-i18n="packs_lead">Le programme complet (méthodologie + stratégies avancées) est identique dans les trois packs. Ce qui évolue, c'est la garantie, la réactivité et l'accompagnement — jamais le contenu enseigné.</p>
     </div>
-    <div class="steps">
-      <div class="step"><div class="idx">01</div><h4 data-i18n="how1_h">Appel diagnostique gratuit</h4><p data-i18n="how1_p">15–20 min pour évaluer ton niveau et ton objectif.</p></div>
-      <div class="step"><div class="idx">02</div><h4 data-i18n="how2_h">On évalue ton niveau</h4><p data-i18n="how2_p">Un mock test de référence pour mesurer ton point de départ.</p></div>
-      <div class="step"><div class="idx">03</div><h4 data-i18n="how3_h">Pack personnalisé</h4><p data-i18n="how3_p">On te recommande le pack adapté à ton objectif.</p></div>
-      <div class="step"><div class="idx">04</div><h4 data-i18n="how4_h">Tu progresses, tu es récompensé</h4><p data-i18n="how4_p">Chaque progrès mesuré ouvre une réduction sur la suite.</p></div>
+    <div class="packs">
+      <div class="pack">
+        <h3 data-i18n="pack1_h">Starter</h3>
+        <p class="from" data-i18n="pack1_from">Idéal pour démarrer sereinement</p>
+        <div class="pack-pricebox">
+          <div class="ppb-label" data-i18n="ppb_label">Fourchettes indicatives</div>
+          <div class="ppb-cols">
+            <div class="ppb-col"><span class="ppb-exam">SAT</span><span class="ppb-price">3500<small>MAD</small></span></div>
+            <div class="ppb-col"><span class="ppb-exam">GRE</span><span class="ppb-price">4000<small>MAD</small></span></div>
+            <div class="ppb-col"><span class="ppb-exam">GMAT</span><span class="ppb-price">4500<small>MAD</small></span></div>
+          </div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack1_hours">10h d'accompagnement incluses</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack1_f1">Accompagnement 1-on-1, programme complet maths</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack1_f2">3 mock tests officiels inclus</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack1_f3">Accès à la bibliothèque de ressources</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack1_f4">Messagerie directe avec ton tuteur</span></li>
+        </ul>
+        <a href="reservation.html" class="btn btn-ghost" data-i18n="pack_cta">Commencer par un appel</a>
+      </div>
+      <div class="pack">
+        <h3 data-i18n="pack2_h">Advanced</h3>
+        <p class="from" data-i18n="pack2_from">Pour un suivi plus rapproché</p>
+        <div class="pack-pricebox">
+          <div class="ppb-label" data-i18n="ppb_label">Fourchettes indicatives</div>
+          <div class="ppb-cols">
+            <div class="ppb-col"><span class="ppb-exam">SAT</span><span class="ppb-price">5500<small>MAD</small></span></div>
+            <div class="ppb-col"><span class="ppb-exam">GRE</span><span class="ppb-price">6500<small>MAD</small></span></div>
+            <div class="ppb-col"><span class="ppb-exam">GMAT</span><span class="ppb-price">7500<small>MAD</small></span></div>
+          </div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack2_hours">20h d'accompagnement incluses</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack2_f1">Tout Starter, inclus</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack2_f2">5 mock tests + plan de révision mis à jour</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack2_f3">Créneaux prioritaires, soir et week-end</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack2_f4">Réponse garantie sous 24h</span></li>
+        </ul>
+        <a href="reservation.html" class="btn btn-ghost" data-i18n="pack_cta">Commencer par un appel</a>
+      </div>
+      <div class="pack elite">
+        <span class="badge" data-i18n="pack3_badge">Le plus complet</span>
+        <h3 data-i18n="pack3_h">Elite</h3>
+        <p class="from" data-i18n="pack3_from">Pour viser un score cible garanti</p>
+        <div class="pack-pricebox">
+          <div class="ppb-label" data-i18n="ppb_label">Fourchettes indicatives</div>
+          <div class="ppb-cols">
+            <div class="ppb-col"><span class="ppb-exam">SAT</span><span class="ppb-price">8000<small>MAD</small></span></div>
+            <div class="ppb-col"><span class="ppb-exam">GRE</span><span class="ppb-price">9500<small>MAD</small></span></div>
+            <div class="ppb-col"><span class="ppb-exam">GMAT</span><span class="ppb-price">11000<small>MAD</small></span></div>
+          </div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack3_hours">30h d'accompagnement incluses</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack3_f1">Tout Advanced, inclus</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack3_f2">Garantie de score : sessions offertes jusqu'à l'objectif</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack3_f3">Accompagnement candidature + relecture d'essai</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pack3_f4">Simulation complète le jour J</span></li>
+        </ul>
+        <a href="reservation.html" class="btn btn-primary" data-i18n="pack_cta">Commencer par un appel</a>
+      </div>
+    </div>
+    <p class="price-note" style="margin-top:30px;" data-i18n="price_note">Tarifs indicatifs à partir de. Le prix exact et le pack recommandé sont confirmés lors de ton appel diagnostique gratuit.</p>
+  </div>
+</section>
+
+<!-- ============ PROGRESS REWARD ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="reward">
+      <div>
+        <p class="eyebrow" style="color:var(--teal);" data-i18n="reward_eyebrow">Progress Reward</p>
+        <h2 style="margin-top:10px;" data-i18n="reward_title">Ta progression te fait économiser</h2>
+        <p data-i18n="reward_lead">Avant ton premier pack, tu passes un mock test de référence. À la fin de chaque pack, un nouveau mock test mesure ta progression réelle en points, sur l'échelle de ton examen.</p>
+      </div>
+      <table class="reward-table">
+        <thead><tr>
+          <th data-i18n="reward_th_tier">Palier</th><th>SAT</th><th>GRE</th><th>GMAT</th><th data-i18n="reward_th_disc">Réduction</th>
+        </tr></thead>
+        <tbody>
+          <tr><td data-i18n="reward_row1">Palier 1</td><td>+50</td><td>+4</td><td>+3</td><td class="disc">-5%</td></tr>
+          <tr><td data-i18n="reward_row2">Palier 2</td><td>+100</td><td>+7</td><td>+6</td><td class="disc">-15%</td></tr>
+          <tr><td data-i18n="reward_row3">Palier 3</td><td>+150</td><td>+10</td><td>+9</td><td class="disc">-20%</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
